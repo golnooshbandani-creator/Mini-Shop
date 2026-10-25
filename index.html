@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <h1>MiniShop</h1>
+
+        <div class="nav-actions">
+            <button id="cartBtn">
+                Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Find Your Favorite Products</h2>
+            <p>Discover amazing products at great prices</p>
+
+            <button>Shop Now</button>
+            <input type="text" id="searchInput" placeholder="Search Products...">
+        </section>
+
+        <section class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="beauty">Beauty</button>
+            <button class="category-btn" data-category="fragrances">Fragrances</button>
+            <button class="category-btn" data-category="furniture">Furniture</button>
+            <button class="category-btn" data-category="groceries">Groceries</button>
+        </section>
+
+
+        <section class="products-section">
+
+            <div class="section-header">
+                <h2>Products</h2>
+
+                <select id="sortSelect">
+                    <option value="default">Sort by</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <p id="loadingMessage">Loading products...</p>
+
+            <div id="productsContainer" class="products-grid"></div>
+            <p id="emptyMessage">No products found</p>
+            <p id="errorMessage"></p>
+        </section>
+    </main>
+
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="closeCart">X</button>
+            </div>
+
+            <div id="cartItems">
+
+            </div>
+
+            <div class="cart-footer">
+                <h3>Total: $<span id="cartTotal">0</span></h3>
+                <button id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
